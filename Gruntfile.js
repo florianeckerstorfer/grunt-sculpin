@@ -1,6 +1,6 @@
 /*
-* grunt-symfony2
-* https://github.com/florianeckerstorfer/grunt-symfony2
+* grunt-sculpin
+* https://github.com/florianeckerstorfer/grunt-sculpin
 *
 * Copyright (c) 2014 Florian Eckerstorfer
 * Licensed under the MIT license.
