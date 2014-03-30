@@ -19,6 +19,14 @@ Once you installed the plugin you can enable it inside your Gruntfile with this 
 grunt.loadNpmTasks('grunt-sculpin');
 ```
 
+## Tasks
+
+`grunt-sculpin` contains the following tasks:
+
+- [sculpin-generate](#the-sculpin-generate-task)
+- [sculpin-watch](#the-sculpin-watch-task)
+- [sculpin-serve](#the-sculpin-serve-task)
+
 ## The "sculpin-generate" task
 
 The `sculpin-generate` task executes Sculpin's `generate` command.
@@ -45,7 +53,7 @@ In your project's Gruntfile, add a section named `sculpin-generate` to the data 
 Type: `String`
 Default value: `sculpin`
 
-Path to console application that you want to use.
+Path to Sculpin binary that you want to use.
 
 ### Usage Examples
 
