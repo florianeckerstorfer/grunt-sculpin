@@ -164,6 +164,6 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-### Version 0.1 (24 March 2014)
+### Version 0.1 (30 March 2014)
 
 - Initial release
