@@ -19,20 +19,19 @@ Once you installed the plugin you can enable it inside your Gruntfile with this 
 grunt.loadNpmTasks('grunt-sculpin');
 ```
 
-## The "sf2-console" task
+## The "sculpin-generate" task
 
-The `sf2-console` task let's you execute arbitrary commands of your Symfony2 application.
+The `sculpin-generate` task executes Sculpin's `generate` command.
 
 ### Overview
-In your project's Gruntfile, add a section named `sf2-console` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `sculpin-generate` to the data object passed into `grunt.initConfig()`.
 
 ```js
-'sf2-console': {
+'sculpin-generate': {
     options: {
         // Task-specific options go here.
     },
     your_target: {
-        cmd: 'command:name',
         args: {
             // Arguments
         }
@@ -44,24 +43,19 @@ In your project's Gruntfile, add a section named `sf2-console` to the data objec
 
 #### options.bin
 Type: `String`
-Default value: `app/console`
+Default value: `sculpin`
 
 Path to console application that you want to use.
 
 ### Usage Examples
 
 #### Default Options
-`grunt-symfony2` uses by default `app/console` as binary to execute commands.
+`grunt-sculpin` uses by default `sculpin` as binary to execute commands.
 
 ```js
-'sf2-console': {
+'sculpin-generate': {
     options: {},
-    cache_clear_prod: {
-        cmd: 'cache:clear',
-        args: {
-            env: 'prod'
-        }
-    }
+    build: {}
 }
 ```
 
@@ -69,16 +63,87 @@ Path to console application that you want to use.
 If you want to use a custom binary, you can change the `bin` option.
 
 ```js
-'sf2-console': {
+'sculpin-generate': {
     options: {
-        bin: 'app/sf2console'
+        bin: 'php bin/sculpin'
     },
-    cache_clear_prod: {
-        cmd: 'cache:clear',
+    build: {
         args: {
             env: 'prod'
         }
     }
+}
+```
+
+## The "sculpin-watch" task
+
+The `sculpin-watch` task executes Sculpin's `generate --watch` command.
+
+### Overview
+In your project's Gruntfile, add a section named `sculpin-watch` to the data object passed into `grunt.initConfig()`.
+
+```js
+'sculpin-watch': {
+    options: {
+        // Task-specific options go here.
+    },
+    your_target: {
+        args: {
+            // Arguments
+        }
+    }
+}
+```
+
+### Options
+
+Supports the same options as `sulpin-generate`
+
+### Usage Examples
+
+#### Default Options
+`grunt-sculpin` uses by default `sculpin` as binary to execute commands.
+
+```js
+'sculpin-watch': {
+    options: {},
+    build: {}
+}
+```
+
+## The "sculpin-serve" task
+
+The `sculpin-serve` task executes Sculpin's `server` command.
+
+### Overview
+In your project's Gruntfile, add a section named `sculpin-serve` to the data object passed into `grunt.initConfig()`.
+
+```js
+'sculpin-serve': {
+    options: {
+        // Task-specific options go here.
+    },
+    your_target: {
+        args: {
+            // Arguments
+        }
+    }
+}
+```
+
+### Options
+
+Supports the same options as `sulpin-generate`
+
+### Usage Examples
+
+#### Default Options
+`grunt-sculpin` uses by default `sculpin` as binary to execute commands.
+
+```js
+'sculpin-serve': {
+    options: {},
+    build: {}
 }
 ```
 
