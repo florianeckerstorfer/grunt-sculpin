@@ -9,12 +9,11 @@
 'use strict';
 
 module.exports = function (grunt) {
-
     var exec = require('child_process').exec,
         execCmd = function (cmd, cb, execOpts) {
             grunt.verbose.writeln('Exec: ' + cmd);
             exec(cmd, execOpts, function (err, stdout, stderr) {
-                grunt.verbose.writeln(stdout);
+                grunt.log.writeln(stdout);
                 if (stderr) {
                     grunt.fatal(stderr);
                 }
