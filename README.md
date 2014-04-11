@@ -164,6 +164,10 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+### Version 0.2 (11 April 2014)
+
+- Show output of Sculpin in Grunt output
+
 ### Version 0.1 (30 March 2014)
 
 - Initial release
